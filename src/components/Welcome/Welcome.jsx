@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Welcome = () => {
+export const Welcome = ({ handleGame }) => {
+  const handleClick = () => {
+    handleGame(false);
+  };
+
   return (
     <div className=' max-w-xl mx-auto bg-white rounded-2xl'>
       <div className='px-4 py-4 border-b-[2px]'>
@@ -19,7 +23,9 @@ export const Welcome = () => {
             проигравшим
           </li>
         </ol>
-        <button className='py-2 px-4 bg-violet-600 rounded text-white mx-auto w-max-content'>Начать игру</button>
+        <button onClick={handleClick} className='py-2 px-4 bg-violet-600 rounded text-white mx-auto w-max-content'>
+          Начать игру
+        </button>
       </div>
     </div>
   );
