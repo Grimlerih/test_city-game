@@ -3,7 +3,7 @@ import { cities } from '../data/cities';
 export const bot = ({ message, setMove, setMessage }) => {
   let letter = message[message.length - 1];
 
-  const botAnswerTimer = Math.round(Math.random() * 118 * 1000);
+  const botAnswerTimer = Math.round(Math.random() * 15 * 1000);
   setTimeout(() => {
     botAnswer();
   }, botAnswerTimer);

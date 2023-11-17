@@ -43,6 +43,7 @@ export const Input = ({ message, newMessage, setNewMessage, setMessage, setMove,
   }
 
   const handleAddMessage = () => {
+    newMessage = newMessage.trim();
     const messageObj = {
       text: newMessage,
       owner: 'user',
